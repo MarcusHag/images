@@ -1,7 +1,11 @@
-To extract metadata from images using Python, there are several libraries available. One of the most commonly used libraries is the Python Imaging Library (PIL), which makes the task of extracting metadata from an image extremely easy. Here are the steps to extract metadata from an image using PIL:
+To extract metadata from images using Python, there are several libraries available. 
+One of the most commonly used libraries is the Python Imaging Library (PIL), which makes the task of extracting metadata from an image extremely easy. 
+Here are the steps to extract metadata from an image using PIL:
 Install PIL using pip: pip install pillow
 Import the necessary modules: from PIL import Image, ExifTags
 Load the image: img = Image.open("path/to/image.jpg")
 Get the metadata: exif_data = { ExifTags.TAGS[k]: v for k, v in img._getexif().items() if k in ExifTags.TAGS }
-This will extract the metadata from the image and store it in a dictionary called exif_data. The keys of the dictionary correspond to the different types of metadata, such as the date and time the image was taken, the camera model, and the image resolution.
-Other libraries that can be used to extract metadata from images include exif, exifread, and pyexiv2. These libraries provide similar functionality to PIL and can be used to extract metadata from a wide range of image formats.
+This will extract the metadata from the image and store it in a dictionary called exif_data. 
+The keys of the dictionary correspond to the different types of metadata, such as the date and time the image was taken, the camera model, and the image resolution.
+Other libraries that can be used to extract metadata from images include exif, exifread, and pyexiv2. 
+These libraries provide similar functionality to PIL and can be used to extract metadata from a wide range of image formats.
